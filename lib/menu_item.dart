@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class WidgetItem {
+class MenuItem {
   final String title;
   final Widget page;
 
-  WidgetItem({this.title, this.page});
+  MenuItem({this.title, this.page});
 }

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:wotw/menu_item.dart';
-import 'package:wotw/widgets_of_the_week/expanded/expanded_main_page.dart';
+import 'package:wotw/widgets_of_the_week/expanded/expanded_flex_page.dart';
+import 'package:wotw/widgets_of_the_week/expanded/expanded_page.dart';
 import 'package:wotw/widgets_of_the_week/safe_area/safe_area_page.dart';
 
-void main() => runApp(MyApp());
+class ExpandedMainPage extends StatelessWidget {
 
-class MyApp extends StatelessWidget {
   List<MenuItem> items = [
-    MenuItem(title: "Safe Area", page: SafeAreaPage()),
-    MenuItem(title: "Expanded", page: ExpandedMainPage()),
+    MenuItem(title: "Simple Expanded", page: ExpandedPage()),
+    MenuItem(title: "Expanded with Flex", page: ExpandedFlexPage()),
   ];
 
   @override
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Widget Of The Week"),
+          title: Text("Expanded"),
         ),
         body: ListView.builder(
             itemCount: items.length,
