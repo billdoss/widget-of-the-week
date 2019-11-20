@@ -8,3 +8,4 @@ Widgets experiments from [**Widget of the Week**](https://www.youtube.com/playli
 - **Expanded**
   - [Simple Expanded](https://github.com/agnamc/widget-of-the-week/blob/master/lib/widgets_of_the_week/expanded/expanded_page.dart)
   - [Expanded with Flex](https://github.com/agnamc/widget-of-the-week/blob/master/lib/widgets_of_the_week/expanded/expanded_flex_page.dart)
+- [Wrap](https://github.com/agnamc/widget-of-the-week/blob/master/lib/widgets_of_the_week/wrap_page.dart)

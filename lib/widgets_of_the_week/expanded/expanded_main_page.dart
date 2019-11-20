@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:wotw/menu_item.dart';
 import 'package:wotw/widgets_of_the_week/expanded/expanded_flex_page.dart';
 import 'package:wotw/widgets_of_the_week/expanded/expanded_page.dart';
-import 'package:wotw/widgets_of_the_week/safe_area/safe_area_page.dart';
 
 class ExpandedMainPage extends StatelessWidget {
-
   List<MenuItem> items = [
     MenuItem(title: "Simple Expanded", page: ExpandedPage()),
     MenuItem(title: "Expanded with Flex", page: ExpandedFlexPage()),
