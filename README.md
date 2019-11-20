@@ -5,7 +5,5 @@ Widgets experiments from [**Widget of the Week**](https://www.youtube.com/playli
 ## Widgets
 
 - [SafeArea](https://github.com/agnamc/widget-of-the-week/blob/master/lib/widgets_of_the_week/safe_area_page.dart)
-- **Expanded**
-  - [Simple Expanded](https://github.com/agnamc/widget-of-the-week/blob/master/lib/widgets_of_the_week/expanded/expanded_page.dart)
-  - [Expanded with Flex](https://github.com/agnamc/widget-of-the-week/blob/master/lib/widgets_of_the_week/expanded/expanded_flex_page.dart)
+- [Expanded](https://github.com/agnamc/widget-of-the-week/blob/master/lib/widgets_of_the_week/expanded/expanded_page.dart)
 - [Wrap](https://github.com/agnamc/widget-of-the-week/blob/master/lib/widgets_of_the_week/wrap_page.dart)

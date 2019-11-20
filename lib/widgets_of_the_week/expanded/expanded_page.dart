@@ -6,40 +6,89 @@ class ExpandedPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Simple Expanded"),
+        title: Text("Expanded"),
       ),
-      body: _buildView(),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: <Widget>[
+            Text("Simple Expanded",
+                style: TextStyle(color: Colors.black, fontSize: 18)),
+            SizedBox(
+              height: 10,
+            ),
+            _buildExpanded(),
+            SizedBox(
+              height: 10,
+            ),
+            Text("Expanded with Flex",
+                style: TextStyle(color: Colors.black, fontSize: 18)),
+            SizedBox(
+              height: 10,
+            ),
+            _buildExpandedWithFlex(),
+            SizedBox(
+              height: 10,
+            ),
+          ],
+        ),
+      ),
     );
   }
 
-  _buildView() {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        children: <Widget>[
-          _buildRowButtons(),
-          buildButton(text: "Normal"),
-          Expanded(
-            child: buildButton(
-                text: "Expanded",
-                textColor: Colors.black,
-                color: Colors.yellow),
-          ),
-          buildButton(text: "Normal"),
-        ],
-      ),
-    );
-  }
-
-  _buildRowButtons() {
+  _buildExpanded(){
     return Row(
       children: <Widget>[
-        buildButton(text: "Normal"),
-        Expanded(
-          child: buildButton(
-              text: "Expanded", textColor: Colors.black, color: Colors.yellow),
+        MaterialButton(
+          color: Colors.blue,
+          child: Text("Normal", style: TextStyle(color: Colors.white),),
+          onPressed: (){},
         ),
-        buildButton(text: "Normal"),
+        Expanded(
+          child: MaterialButton(
+            color: Colors.orange,
+            child: Text("Expanded", style: TextStyle(color: Colors.white),),
+            onPressed: (){},
+          ),
+        ),
+        MaterialButton(
+          color: Colors.blue,
+          child: Text("Normal", style: TextStyle(color: Colors.white),),
+          onPressed: (){},
+        ),
+      ],
+    );
+  }
+
+  _buildExpandedWithFlex(){
+    return Row(
+      children: <Widget>[
+        MaterialButton(
+          color: Colors.blue,
+          child: Text("Normal", style: TextStyle(color: Colors.white),),
+          onPressed: (){},
+        ),
+        Expanded(
+          flex: 3,
+          child: MaterialButton(
+            color: Colors.orange,
+            child: Text("Flex 3", style: TextStyle(color: Colors.white),),
+            onPressed: (){},
+          ),
+        ),
+        MaterialButton(
+          color: Colors.blue,
+          child: Text("Normal", style: TextStyle(color: Colors.white),),
+          onPressed: (){},
+        ),
+        Expanded(
+          flex: 2,
+          child: MaterialButton(
+            color: Colors.orange,
+            child: Text("Flex 2", style: TextStyle(color: Colors.white),),
+            onPressed: (){},
+          ),
+        ),
       ],
     );
   }
